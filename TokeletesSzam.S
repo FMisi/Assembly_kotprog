@@ -30,7 +30,6 @@ is_perfect:
 
 .igenvagynem:
 	cmp ebx, eax /* if(ebx != eax) { */
-	/* je .igen */
 	jne .nem /* goto .nem; } else { */
 	jmp .igen /* goto .igen; } */
 
@@ -40,7 +39,6 @@ is_perfect:
 
 .igen:
 	mov eax, 1 /* return 1; */
-	jmp .vege /* goto .vege; */
 
 .vege:
 	pop ebx /* valtozovisszaalitas */
