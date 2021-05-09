@@ -13,6 +13,8 @@ is_perfect:
 .ciklus:
 	xor edx, edx /* maradek torles */
 	mov eax, [ebp + 8] /* 1. parameter */
+	cmp eax, 0 /* if(1. parameter (eax) == 0) */
+	je  .nem
 	cmp eax, ecx /* if(1. parameter (eax) <= ciklus valtozo (ecx)){ */
 	jle .igenvagynem /* goto .igenvagynem; } */
 	div ecx	/* edx:eax */
@@ -34,14 +36,15 @@ is_perfect:
 
 .nem:
 	mov eax, 0 /* return 0; */
-	jmp .vege
+	jmp .vege /* goto .vege; */
 
 .igen:
 	mov eax, 1 /* return 1; */
-	jmp .vege
+	jmp .vege /* goto .vege; */
 
 .vege:
 	pop ebx /* valtozovisszaalitas */
 	mov esp, ebp
 	pop ebp
 	ret
+
