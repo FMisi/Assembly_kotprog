@@ -30,7 +30,7 @@ is_perfect:
 	cmp ebx, eax /* if(ebx != eax) { */
 	/* je .igen */
 	jne .nem /* goto .nem; } else { */
-    jmp .igen /* goto .igen; } */
+	jmp .igen /* goto .igen; } */
 
 .nem:
 	mov eax, 0 /* return 0; */
