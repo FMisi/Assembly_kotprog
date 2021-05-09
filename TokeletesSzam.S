@@ -7,8 +7,8 @@ is_perfect:
 	push ebp /* az ebp erteke a verembe kerul */
 	mov ebp, esp /* esp-ben levo adat mozgatasa ebp-be, igy mondjuk kb C-ben: ebp = esp; */
 	push ebx /* valtozomentes */
-	mov ecx, 1	/* ciklus valtozo */
-	xor ebx, ebx  /* ebx = osztok osszege; eredmeny op1-be kerul */
+	mov ecx, 1 /* ciklus valtozo */
+	xor ebx, ebx /* ebx = osztok osszege; eredmeny op1-be kerul */
 
 .ciklus:
 	xor edx, edx /* maradek torles */
